@@ -41,6 +41,12 @@ NS_EXTENSION_UNAVAILABLE_IOS("Camera not available in app extensions.")
                         format:(AVCaptureDeviceFormat *)format
                            fps:(NSInteger)fps
              completionHandler:(nullable void (^)(NSError *_Nullable))completionHandler;
+
+
+- (void) changeCameraAndCaptureWithDevice:(AVCaptureDevice *)device
+                                   format:(AVCaptureDeviceFormat *)format
+                                      fps:(NSInteger)fps;
+
 // Stops the capture session asynchronously and notifies callback on completion.
 - (void)stopCaptureWithCompletionHandler:(nullable void (^)(void))completionHandler;
 

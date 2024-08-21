@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 RTC_OBJC_EXPORT @protocol RTC_OBJC_TYPE (RTCVideoCaptureShopliveDelegate)<NSObject>
     - (void)capturer : (RTC_OBJC_TYPE(RTCVideoCapturer) *) capturer didCaptureVideoSampleBuffer: (CMSampleBufferRef) frame;
     - (void)capturer : (RTC_OBJC_TYPE(RTCVideoCapturer) *) capturer didCaptureAudioFrame : (CMSampleBufferRef) frame;
+    - (void)capturer : (RTC_OBJC_TYPE(RTCVideoCapturer) *) capturer didCaptureRTCVideoFrame : (RTCVideoFrame *) frame;
 @end
 
 

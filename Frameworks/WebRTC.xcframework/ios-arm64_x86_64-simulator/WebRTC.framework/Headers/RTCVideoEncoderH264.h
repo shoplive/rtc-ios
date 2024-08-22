@@ -14,9 +14,13 @@
 #import <WebRTC/RTCVideoCodecInfo.h>
 #import <WebRTC/RTCVideoEncoder.h>
 
+
 RTC_OBJC_EXPORT
 @interface RTC_OBJC_TYPE (RTCVideoEncoderH264) : NSObject <RTC_OBJC_TYPE(RTCVideoEncoder)>
 
+
 - (instancetype)initWithCodecInfo:(RTC_OBJC_TYPE(RTCVideoCodecInfo) *)codecInfo;
+//MARK: - added by hassan v1.0.3
++ (void)setKeyFrameInterval : (int) keyFrameInterval;
 
 @end

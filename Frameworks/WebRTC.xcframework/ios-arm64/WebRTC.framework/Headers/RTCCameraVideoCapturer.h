@@ -57,6 +57,10 @@ NS_EXTENSION_UNAVAILABLE_IOS("Camera not available in app extensions.")
 // Stops the capture session asynchronously.
 - (void)stopCapture;
 
+  //MARK: - added by hassan v1.0.4
+- (void)forcePortrait;
+- (void)forceLandscape;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -23,4 +23,8 @@ RTC_OBJC_EXPORT
 //MARK: - added by hassan v1.0.3
 + (void)setKeyFrameInterval : (int) keyFrameInterval;
 
+//MARK: - added by hassan v1.0.17
++ (void)setKeyFrameIntervalForVTCompressSession: (int) keyFrameInterval;
++ (void)setKeyFrameIntervalDurationForVTCompressSession : (int) keyFrameIntervalDuration;
+
 @end

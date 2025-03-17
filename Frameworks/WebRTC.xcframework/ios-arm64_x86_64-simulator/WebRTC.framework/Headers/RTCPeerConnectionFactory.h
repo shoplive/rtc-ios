@@ -120,6 +120,8 @@ RTC_OBJC_EXPORT
 
 /* Stop an active AecDump recording */
 - (void)stopAecDump;
+//MARK: - changed by hassan 1.0.16
+- (void)clearAudioPlayOutBuffer;
 
 @end
 

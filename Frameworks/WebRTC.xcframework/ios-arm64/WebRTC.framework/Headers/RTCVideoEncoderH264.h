@@ -10,9 +10,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import <WebRTC/RTCMacros.h>
 #import <WebRTC/RTCVideoCodecInfo.h>
 #import <WebRTC/RTCVideoEncoder.h>
+#import <WebRTC/RTCMacros.h>
 
 
 RTC_OBJC_EXPORT

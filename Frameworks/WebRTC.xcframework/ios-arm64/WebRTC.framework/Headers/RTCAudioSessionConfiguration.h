@@ -41,7 +41,8 @@ RTC_OBJC_EXPORT
 /** Returns the configuration that WebRTC needs. */
 + (instancetype)webRTCConfiguration;
 /** Provide a way to override the default configuration. */
-+ (void)setWebRTCConfiguration:(RTC_OBJC_TYPE(RTCAudioSessionConfiguration) *)configuration;
++ (void)setWebRTCConfiguration:
+    (RTC_OBJC_TYPE(RTCAudioSessionConfiguration) *)configuration;
 
 @end
 

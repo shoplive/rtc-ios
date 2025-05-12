@@ -8,6 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
+#import <WebRTC/RTCPortSelectManagerWrapper.h>
 #import <WebRTC/RTCCodecSpecificInfo.h>
 #import <WebRTC/RTCEncodedImage.h>
 #import <WebRTC/RTCI420Buffer.h>

@@ -67,6 +67,7 @@ typedef NS_ENUM(NSInteger, RTCPeerConnectionState) {
   RTCPeerConnectionStateDisconnected,
   RTCPeerConnectionStateFailed,
   RTCPeerConnectionStateClosed,
+    
 };
 
 /** Represents the ice gathering state of the peer connection. */

@@ -109,11 +109,6 @@ RTC_OBJC_EXPORT
 - (void)audioSession:(RTC_OBJC_TYPE(RTCAudioSession) *)audioSession
     audioUnitStartFailedWithError:(NSError *)error;
 
-//MARK: - changed by hassan 1.0.14
-- (void)audioSession:(RTC_OBJC_TYPE(RTCAudioSession) *)audioSession
-    didChangeMicrophoneMute:(BOOL)isMicrophoneMute;
-
-
 @end
 
 /** This is a protocol used to inform RTCAudioSession when the audio session

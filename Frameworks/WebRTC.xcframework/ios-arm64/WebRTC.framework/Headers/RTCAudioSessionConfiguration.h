@@ -26,8 +26,6 @@ RTC_OBJC_EXPORT
 @property(nonatomic, strong) NSString *category;
 @property(nonatomic, assign) AVAudioSessionCategoryOptions categoryOptions;
 @property(nonatomic, strong) NSString *mode;
-//MARK: - changed by hassan 1.0.14
-@property(nonatomic, assign) BOOL isMicrophoneMute;
 @property(nonatomic, assign) double sampleRate;
 @property(nonatomic, assign) NSTimeInterval ioBufferDuration;
 @property(nonatomic, assign) NSInteger inputNumberOfChannels;

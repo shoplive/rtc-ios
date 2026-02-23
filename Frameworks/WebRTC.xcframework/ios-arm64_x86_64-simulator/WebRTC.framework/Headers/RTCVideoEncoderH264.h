@@ -20,11 +20,5 @@ RTC_OBJC_EXPORT
 
 
 - (instancetype)initWithCodecInfo:(RTC_OBJC_TYPE(RTCVideoCodecInfo) *)codecInfo;
-//MARK: - added by hassan v1.0.3
-//+ (void)setKeyFrameInterval : (int) keyFrameInterval;
-
-//MARK: - added by hassan v1.0.17
-//+ (void)setKeyFrameIntervalForVTCompressSession: (int) keyFrameInterval;
-//+ (void)setKeyFrameIntervalDurationForVTCompressSession : (int) keyFrameIntervalDuration;
 
 @end

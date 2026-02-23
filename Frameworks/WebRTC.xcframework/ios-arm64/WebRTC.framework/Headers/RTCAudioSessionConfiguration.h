@@ -26,6 +26,9 @@ RTC_OBJC_EXPORT
 @property(nonatomic, strong) NSString *category;
 @property(nonatomic, assign) AVAudioSessionCategoryOptions categoryOptions;
 @property(nonatomic, strong) NSString *mode;
+// Legacy compatibility flag used by downstream apps to force playout-only mode.
+// When true, rtc-ios disables input path even if category supports recording.
+@property(nonatomic, assign) BOOL isMicrophoneMute;
 @property(nonatomic, assign) double sampleRate;
 @property(nonatomic, assign) NSTimeInterval ioBufferDuration;
 @property(nonatomic, assign) NSInteger inputNumberOfChannels;

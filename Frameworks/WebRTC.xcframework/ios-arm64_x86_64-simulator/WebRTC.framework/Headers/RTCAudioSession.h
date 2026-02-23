@@ -109,6 +109,10 @@ RTC_OBJC_EXPORT
 - (void)audioSession:(RTC_OBJC_TYPE(RTCAudioSession) *)audioSession
     audioUnitStartFailedWithError:(NSError *)error;
 
+// Legacy callback for downstream apps that drive viewer mode via RTCAudioSession.
+- (void)audioSession:(RTC_OBJC_TYPE(RTCAudioSession) *)audioSession
+    didChangeMicrophoneMute:(BOOL)isMicrophoneMute;
+
 @end
 
 /** This is a protocol used to inform RTCAudioSession when the audio session
@@ -169,6 +173,9 @@ RTC_OBJC_EXPORT
  *  we are able to prevent the abrupt cutoff.
  */
 @property(nonatomic, assign) BOOL isAudioEnabled;
+
+// Legacy compatibility flag. When enabled, rtc-ios runs in playout-only mode.
+@property(nonatomic, assign) BOOL isMicrophoneMute;
 
 // Proxy properties.
 @property(readonly) NSString *category;

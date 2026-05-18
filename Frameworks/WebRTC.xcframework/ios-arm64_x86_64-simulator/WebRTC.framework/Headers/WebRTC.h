@@ -68,6 +68,7 @@
 #import <WebRTC/RTCMetricsSampleInfo.h>
 #import <WebRTC/RTCPeerConnection.h>
 #import <WebRTC/RTCPeerConnectionFactory+AudioLevel.h>
+#import <WebRTC/RTCPeerConnectionFactory+InputBytes.h>
 #import <WebRTC/RTCPeerConnectionFactory+BypassVoiceProcessing.h>
 #import <WebRTC/RTCPeerConnectionFactory.h>
 #import <WebRTC/RTCPeerConnectionFactoryOptions.h>

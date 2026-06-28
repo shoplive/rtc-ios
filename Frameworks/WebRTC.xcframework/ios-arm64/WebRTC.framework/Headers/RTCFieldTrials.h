@@ -20,6 +20,7 @@ RTC_EXTERN NSString *const kRTCFieldTrialFlexFec03Key;
 RTC_EXTERN NSString *const kRTCFieldTrialH264HighProfileKey;
 RTC_EXTERN NSString *const kRTCFieldTrialMinimizeResamplingOnMobileKey;
 RTC_EXTERN NSString *const kRTCFieldTrialUseNWPathMonitor;
+RTC_EXTERN NSString *const audioCaptureTimeSync;
 
 /** The valid value for field trials above. */
 RTC_EXTERN NSString *const kRTCFieldTrialEnabledValue;

@@ -56,9 +56,7 @@ RTC_OBJC_EXPORT
 // Stops the capture session asynchronously.
 - (void)stopCapture;
 
-  //MARK: - added by hassan v1.0.4
-- (void)forcePortrait;
-- (void)forceLandscape;
+- (void)setCaptureVideoMirrored:(BOOL)mirrored NS_SWIFT_NAME(setCaptureVideoMirrored(_:));
 
 @end
 

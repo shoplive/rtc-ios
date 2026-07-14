@@ -56,6 +56,8 @@ RTC_OBJC_EXPORT
 // Stops the capture session asynchronously.
 - (void)stopCapture;
 
+// Sets whether captured video is mirrored via the underlying AVCaptureConnection.
+// Default is YES to preserve legacy behavior when this API is not called.
 - (void)setCaptureVideoMirrored:(BOOL)mirrored NS_SWIFT_NAME(setCaptureVideoMirrored(_:));
 
 @end

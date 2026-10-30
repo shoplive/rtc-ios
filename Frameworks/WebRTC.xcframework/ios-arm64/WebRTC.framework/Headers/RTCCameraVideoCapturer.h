@@ -16,6 +16,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+// shoplive: 캡처 출력 방향 고정 모드. 출력 connection 이 (재)생성될 때마다 다시 적용된다.
+typedef NS_ENUM(NSInteger, RTCCameraVideoFixedOrientation) {
+  // WebRTC 기본 — 버퍼는 센서 방향 그대로, 기기 방향은 프레임 rotation 메타데이터로 전달.
+  RTCCameraVideoFixedOrientationNone = 0,
+  // 출력 connection 을 세로로 고정. 버퍼가 이미 회전되어 있으므로 프레임 rotation 은 항상 0.
+  RTCCameraVideoFixedOrientationPortrait,
+  // 출력 connection 을 가로로 고정(후면 landscapeLeft / 전면 landscapeRight). 프레임 rotation 은 0.
+  RTCCameraVideoFixedOrientationLandscape,
+};
+
 // Camera capture that implements RTCVideoCapturer. Delivers frames to a
 // RTCVideoCapturerDelegate (usually RTCVideoSource).
 NS_EXTENSION_UNAVAILABLE_IOS("Camera not available in app extensions.")
@@ -56,9 +66,18 @@ RTC_OBJC_EXPORT
 // Stops the capture session asynchronously.
 - (void)stopCapture;
 
-// Sets whether captured video is mirrored via the underlying AVCaptureConnection.
-// Default is YES to preserve legacy behavior when this API is not called.
-- (void)setCaptureVideoMirrored:(BOOL)mirrored NS_SWIFT_NAME(setCaptureVideoMirrored(_:));
+// shoplive: 캡처 출력 방향 고정(기본 Portrait). 프로세스 전역 값이라 모든 인스턴스가 공유한다.
+// connection 재생성 시 함께 적용되며 고정 모드에서는 프레임 rotation 이 0.
+@property(nonatomic) RTCCameraVideoFixedOrientation fixedOrientation;
+
+// shoplive: 미러모드(송출 좌우 반전, 기본 YES). 전면 카메라에만 적용되고 후면은 항상 반전하지 않는다.
+// 프로세스 전역 값이라 모든 인스턴스가 공유한다. 카메라 전환(connection 재생성) 시 그 카메라 기준으로 재적용.
+// 프리뷰 레이어에는 영향 없음.
+@property(nonatomic) BOOL captureVideoMirrored;
+
+// 호환용 — fixedOrientation 의 얇은 래퍼 (added by hassan v1.0.4).
+- (void)forcePortrait;
+- (void)forceLandscape;
 
 @end
 
